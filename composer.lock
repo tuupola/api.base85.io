@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e84ad44305fd96351e4124a32ddded6e",
-    "content-hash": "be9e7e60a5b1fc15d0021ff36ee707ec",
+    "hash": "015c70f9881abdf5a8df69d0894d6e0b",
+    "content-hash": "44902273e49b01ecc2b442f778fa23b1",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -785,6 +785,72 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "deployer/recipes",
+            "version": "4.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/recipes.git",
+                "reference": "4811488d2f210e5d93e874d9615aea8b58dc3aa2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/recipes/zipball/4811488d2f210e5d93e874d9615aea8b58dc3aa2",
+                "reference": "4811488d2f210e5d93e874d9615aea8b58dc3aa2",
+                "shasum": ""
+            },
+            "replace": {
+                "deployphp/recipes": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Gordalina",
+                    "email": "samuel.gordalina@gmail.com",
+                    "homepage": "https://gordalina.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Tomas Majer",
+                    "email": "tomasmajer@gmail.com",
+                    "homepage": "http://tomaj.sk",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Hubert Kowalski",
+                    "email": "h.kowalski@hakger.pl",
+                    "homepage": "https://hakger.pl",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io",
+                    "homepage": "http://medv.io",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "3rd party deployer recipes",
+            "homepage": "https://github.com/deployphp/recipes",
+            "keywords": [
+                "cachetool",
+                "deploy",
+                "deployer",
+                "deployment",
+                "newrelic",
+                "recipes",
+                "slack"
+            ],
+            "time": "2017-03-27 16:28:47"
+        },
         {
             "name": "overtrue/phplint",
             "version": "0.2.1",
