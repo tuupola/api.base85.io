@@ -15,6 +15,8 @@
 
 date_default_timezone_set("UTC");
 
+use Tuupola\Base62;
+
 require __DIR__ . "/vendor/autoload.php";
 
 $dotenv = new Dotenv\Dotenv(__DIR__);
@@ -31,8 +33,22 @@ require __DIR__ . "/config/dependencies.php";
 require __DIR__ . "/config/handlers.php";
 require __DIR__ . "/config/middleware.php";
 
-$app->get("/", function ($request, $response, $arguments) {
-    print "Here be dragons";
+$app->post("/encode", function ($request, $response, $arguments) {
+    $body = $request->getParsedBody();
+    $encoded = (new Base62)->encode($body["data"]);
+
+    return $response->withStatus(200)
+        ->withHeader("Content-Type", "application/json")
+        ->write(json_encode(["encoded" => $encoded], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+});
+
+$app->post("/decode", function ($request, $response, $arguments) {
+    $body = $request->getParsedBody();
+    $decoded = (new Base62)->decode($body["data"]);
+
+    return $response->withStatus(200)
+        ->withHeader("Content-Type", "application/json")
+        ->write(json_encode(["decoded" => $decoded], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
 });
 
 $app->run();
