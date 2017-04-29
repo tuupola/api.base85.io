@@ -26,18 +26,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Install all needed packages
   config.vm.provision "shell", name: "rpm", inline: <<-SHELL
+    rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
     rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
-    rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
   SHELL
 
   # PHP and modules
   config.vm.provision "shell", name: "php", inline: <<-SHELL
-    yum -y install php56w php56w-opcache
-    yum -y install php56w-pdo
-    yum -y install php56w-mcrypt
-    yum -y install php56w-mysqlnd
+    yum -y install mod_php71w
+    yum -y install php71w-cli
+    yum -y install php71w-opcache
+    #yum -y install php71w-pdo
+    yum -y install php71w-mcrypt
+    #yum -y install php71w-mysqlnd
     yum -y install mod_ssl
-    yum -y install php56w-xmlwriter
+    yum -y install php71w-xmlwriter
   SHELL
 
   # Use the provided example environment
@@ -49,25 +51,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", name: "composer", inline: <<-SHELL
     curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
     cd /vagrant && /usr/local/bin/composer install
-  SHELL
-
-# MariaDB
-  config.vm.provision "shell", name: "mariadb", inline: <<-SHELL
-  cat <<EOF | sudo tee /etc/yum.repos.d/mariadb.repo
-[mariadb]
-name = MariaDB
-baseurl = http://yum.mariadb.org/10.0/centos6-amd64
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1
-EOF
-    yum -y install MariaDB-server
-    yum -y install MariaDB-client
-
-    /sbin/service mysql start
-    /sbin/chkconfig --levels 235 mysql on
-
-    echo "CREATE DATABASE example" | mysql -u root
-    cd /vagrant && bin/db migrate
   SHELL
 
 

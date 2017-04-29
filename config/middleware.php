@@ -13,56 +13,11 @@
  *
  */
 
-use App\Token;
 use Crell\ApiProblem\ApiProblem;
 use Gofabian\Negotiation\NegotiationMiddleware;
-use Micheh\Cache\CacheUtil;
-use Slim\Middleware\JwtAuthentication;
-use Slim\Middleware\HttpBasicAuthentication;
 use Tuupola\Middleware\Cors;
 
 $container = $app->getContainer();
-
-$container["HttpBasicAuthentication"] = function ($container) {
-    return new HttpBasicAuthentication([
-        "path" => "/token",
-        "relaxed" => ["192.168.50.52"],
-        "error" => function ($request, $response, $arguments) {
-            $problem = new ApiProblem($arguments["message"], "about:blank");
-            $problem->setStatus(401);
-            return $response
-                ->withHeader("Content-type", "application/problem+json")
-                ->write($problem->asJson(true));
-        },
-        "users" => [
-            "test" => "test"
-        ]
-    ]);
-};
-
-$container["token"] = function ($container) {
-    return new Token;
-};
-
-$container["JwtAuthentication"] = function ($container) {
-    return new JwtAuthentication([
-        "path" => "/",
-        "passthrough" => ["/token", "/info"],
-        "secret" => getenv("JWT_SECRET"),
-        "logger" => $container["logger"],
-        "relaxed" => ["192.168.50.52"],
-        "error" => function ($request, $response, $arguments) {
-            $problem = new ApiProblem($arguments["message"], "about:blank");
-            $problem->setStatus(401);
-            return $response
-                ->withHeader("Content-type", "application/problem+json")
-                ->write($problem->asJson(true));
-        },
-        "callback" => function ($request, $response, $arguments) use ($container) {
-            $container["token"]->hydrate($arguments["decoded"]);
-        }
-    ]);
-};
 
 $container["Cors"] = function ($container) {
     return new Cors([
@@ -89,11 +44,5 @@ $container["Negotiation"] = function ($container) {
     ]);
 };
 
-$app->add("HttpBasicAuthentication");
-$app->add("JwtAuthentication");
 $app->add("Cors");
 $app->add("Negotiation");
-
-$container["cache"] = function ($container) {
-    return new CacheUtil;
-};

@@ -15,34 +15,8 @@
 
 $container = $app->getContainer();
 
-use Spot\Config;
-use Spot\Locator;
-use Tuupola\DBAL\Logging\Psr3Logger;
-
-$container["spot"] = function ($container) {
-
-    $config = new Config();
-    $mysql = $config->addConnection("mysql", [
-        "dbname" => getenv("DB_NAME"),
-        "user" => getenv("DB_USER"),
-        "password" => getenv("DB_PASSWORD"),
-        "host" => getenv("DB_HOST"),
-        "driver" => "pdo_mysql",
-        "charset" => "utf8"
-    ]);
-
-    $spot = new Locator($config);
-
-    $logger = new Psr3Logger($container["logger"]);
-    $mysql->getConfiguration()->setSQLLogger($logger);
-
-    return $spot;
-};
-
 use Monolog\Logger;
 use Monolog\Handler\RotatingFileHandler;
-use Monolog\Handler\StreamHandler;
-use Monolog\Handler\NullHandler;
 use Monolog\Formatter\LineFormatter;
 
 $container = $app->getContainer();
