@@ -16,6 +16,7 @@
 use Crell\ApiProblem\ApiProblem;
 use Gofabian\Negotiation\NegotiationMiddleware;
 use Tuupola\Middleware\Cors;
+use Tuupola\Middleware\ServerTiming;
 
 $container = $app->getContainer();
 
@@ -44,5 +45,10 @@ $container["Negotiation"] = function ($container) {
     ]);
 };
 
+$container["ServerTiming"] = function ($container) {
+    return new ServerTiming;
+};
+
 $app->add("Cors");
 $app->add("Negotiation");
+$app->add("ServerTiming");

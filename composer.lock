@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "015c70f9881abdf5a8df69d0894d6e0b",
-    "content-hash": "44902273e49b01ecc2b442f778fa23b1",
+    "hash": "95f6d17bd97a4ddc17002bd5b347be98",
+    "content-hash": "d24a5e440487875db46dbb020f624673",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -143,6 +143,58 @@
                 "slim"
             ],
             "time": "2017-02-22 18:45:01"
+        },
+        {
+            "name": "http-interop/http-middleware",
+            "version": "0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/http-interop/http-middleware.git",
+                "reference": "9a801fe60e70d5d608b61d56b2dcde29516c81b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/http-interop/http-middleware/zipball/9a801fe60e70d5d608b61d56b2dcde29516c81b9",
+                "reference": "9a801fe60e70d5d608b61d56b2dcde29516c81b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Interop\\Http\\ServerMiddleware\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP server-side middleware",
+            "keywords": [
+                "factory",
+                "http",
+                "middleware",
+                "psr",
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2017-01-14 15:23:42"
         },
         {
             "name": "monolog/monolog",
@@ -584,6 +636,55 @@
             "time": "2017-03-19 17:55:20"
         },
         {
+            "name": "symfony/stopwatch",
+            "version": "v3.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "c5ee0f8650c84b4d36a5f76b3b504233feaabf75"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/c5ee0f8650c84b4d36a5f76b3b504233feaabf75",
+                "reference": "c5ee0f8650c84b4d36a5f76b3b504233feaabf75",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-02-18 17:28:00"
+        },
+        {
             "name": "tuupola/base62",
             "version": "0.8.0",
             "source": {
@@ -680,6 +781,63 @@
                 "slim"
             ],
             "time": "2016-08-12 13:12:58"
+        },
+        {
+            "name": "tuupola/server-timing-middleware",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tuupola/server-timing-middleware.git",
+                "reference": "408c1d5d3fa506dfd34267806539ba8078ef83d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tuupola/server-timing-middleware/zipball/408c1d5d3fa506dfd34267806539ba8078ef83d1",
+                "reference": "408c1d5d3fa506dfd34267806539ba8078ef83d1",
+                "shasum": ""
+            },
+            "require": {
+                "http-interop/http-middleware": "^0.4.1",
+                "php": "^5.5 || ^7.0",
+                "symfony/stopwatch": "^3.0"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.0",
+                "equip/dispatch": "^0.3.0",
+                "overtrue/phplint": "^0.2.0",
+                "phpunit/phpunit": "^4.8",
+                "squizlabs/php_codesniffer": "^2.5",
+                "zendframework/zend-diactoros": "^1.3"
+            },
+            "suggest": {
+                "doctrine/dbal": "If you want to use the DBAL query timer."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tuupola\\Middleware\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mika Tuupola",
+                    "email": "tuupola@appelsiini.net",
+                    "homepage": "http://www.appelsiini.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PSR-7 and PSR-15 server timing middleware",
+            "homepage": "https://github.com/tuupola/server-timing-middleware",
+            "keywords": [
+                "middleware",
+                "psr-15",
+                "psr-7"
+            ],
+            "time": "2017-03-09 15:48:54"
         },
         {
             "name": "vlucas/phpdotenv",
