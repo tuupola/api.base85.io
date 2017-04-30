@@ -36,7 +36,6 @@ require __DIR__ . "/config/middleware.php";
 $app->post("/encode", function ($request, $response, $arguments) {
     $body = $request->getParsedBody();
     $encoded = (new Base62)->encode($body["data"]);
-
     return $response->withStatus(200)
         ->withHeader("Content-Type", "application/json")
         ->write(json_encode(["encoded" => $encoded], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
