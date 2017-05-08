@@ -13,7 +13,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "puppetlabs/centos-6.6-64-nocm"
-  config.vm.network "private_network", ip: "192.168.50.55"
+  config.vm.network "private_network", ip: "192.168.50.56"
 
   # Configure cached packages to be shared between instances of the same base box.
   # More info on http://fgrehm.viewdocs.io/vagrant-cachier/usage
@@ -91,8 +91,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   ███████║███████╗██║██║ ╚═╝ ██║██████╔╝
   ╚══════╝╚══════╝╚═╝╚═╝     ╚═╝╚═════╝
 
-  You can access me at: http://192.168.50.55/encode
-                        http://192.168.50.55/decode
+  You can access me at: http://192.168.50.56/encode
+                        http://192.168.50.56/decode
 
 MESSAGE
 
