@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "95f6d17bd97a4ddc17002bd5b347be98",
-    "content-hash": "d24a5e440487875db46dbb020f624673",
+    "content-hash": "dc1a1ab533963ac28f8f37c53c954f7e",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -36,7 +35,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
-            "time": "2017-02-14 19:40:03"
+            "time": "2017-02-14T19:40:03+00:00"
         },
         {
             "name": "crell/api-problem",
@@ -90,7 +89,7 @@
                 "rest",
                 "xml"
             ],
-            "time": "2016-07-24 18:53:45"
+            "time": "2016-07-24T18:53:45+00:00"
         },
         {
             "name": "gofabian/negotiation-middleware",
@@ -142,7 +141,7 @@
                 "psr-7",
                 "slim"
             ],
-            "time": "2017-02-22 18:45:01"
+            "time": "2017-02-22T18:45:01+00:00"
         },
         {
             "name": "http-interop/http-middleware",
@@ -194,7 +193,7 @@
                 "request",
                 "response"
             ],
-            "time": "2017-01-14 15:23:42"
+            "time": "2017-01-14T15:23:42+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -272,7 +271,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2017-03-13 07:08:03"
+            "time": "2017-03-13T07:08:03+00:00"
         },
         {
             "name": "neomerx/cors-psr7",
@@ -327,7 +326,7 @@
                 "w3.org",
                 "www.w3.org"
             ],
-            "time": "2016-08-03 16:32:06"
+            "time": "2016-08-03T16:32:06+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -370,7 +369,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2017-01-19 11:35:12"
+            "time": "2017-01-19T11:35:12+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -416,7 +415,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2015-09-11 15:10:35"
+            "time": "2015-09-11T15:10:35+00:00"
         },
         {
             "name": "psr/container",
@@ -465,7 +464,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14 16:28:37"
+            "time": "2017-02-14T16:28:37+00:00"
         },
         {
             "name": "psr/http-message",
@@ -515,7 +514,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
@@ -562,7 +561,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "slim/slim",
@@ -633,7 +632,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2017-03-19 17:55:20"
+            "time": "2017-03-19T17:55:20+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -682,26 +681,27 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-18 17:28:00"
+            "time": "2017-02-18T17:28:00+00:00"
         },
         {
-            "name": "tuupola/base62",
-            "version": "0.8.0",
+            "name": "tuupola/base85",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tuupola/base62.git",
-                "reference": "5218b96d005e43124ae9d763efb091ee20505ae9"
+                "url": "https://github.com/tuupola/base85.git",
+                "reference": "ad2f354d095643aa94406062c09d8d4fbdd104f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tuupola/base62/zipball/5218b96d005e43124ae9d763efb091ee20505ae9",
-                "reference": "5218b96d005e43124ae9d763efb091ee20505ae9",
+                "url": "https://api.github.com/repos/tuupola/base85/zipball/ad2f354d095643aa94406062c09d8d4fbdd104f4",
+                "reference": "ad2f354d095643aa94406062c09d8d4fbdd104f4",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.5 || ^7.0"
             },
             "require-dev": {
+                "overtrue/phplint": "^0.2.0",
                 "paragonie/random_compat": "^2.0",
                 "phpbench/phpbench": "^0.13.0",
                 "phpunit/phpunit": "^4.8",
@@ -725,12 +725,12 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Base62 encoder and decoder for arbitrary data",
-            "homepage": "https://github.com/tuupola/base62",
+            "description": "Base85 encoder and decoder for arbitrary data",
+            "homepage": "https://github.com/tuupola/base85",
             "keywords": [
-                "base62"
+                "base85"
             ],
-            "time": "2017-03-12 07:14:17"
+            "time": "2017-04-01T04:27:29+00:00"
         },
         {
             "name": "tuupola/cors-middleware",
@@ -780,7 +780,7 @@
                 "middleware",
                 "slim"
             ],
-            "time": "2016-08-12 13:12:58"
+            "time": "2016-08-12T13:12:58+00:00"
         },
         {
             "name": "tuupola/server-timing-middleware",
@@ -837,7 +837,7 @@
                 "psr-15",
                 "psr-7"
             ],
-            "time": "2017-03-09 15:48:54"
+            "time": "2017-03-09T15:48:54+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -887,7 +887,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01 10:05:43"
+            "time": "2016-09-01T10:05:43+00:00"
         },
         {
             "name": "willdurand/negotiation",
@@ -939,7 +939,7 @@
                 "header",
                 "negotiation"
             ],
-            "time": "2016-10-14 09:17:47"
+            "time": "2016-10-14T09:17:47+00:00"
         }
     ],
     "packages-dev": [
@@ -1007,7 +1007,7 @@
                 "recipes",
                 "slack"
             ],
-            "time": "2017-03-27 16:28:47"
+            "time": "2017-03-27T16:28:47+00:00"
         },
         {
             "name": "overtrue/phplint",
@@ -1056,7 +1056,7 @@
                 "phplint",
                 "syntax"
             ],
-            "time": "2017-04-02 02:24:26"
+            "time": "2017-04-02T02:24:26+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1134,7 +1134,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-03-01 22:17:45"
+            "time": "2017-03-01T22:17:45+00:00"
         },
         {
             "name": "symfony/console",
@@ -1197,7 +1197,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-04-04 14:33:42"
+            "time": "2017-04-04T14:33:42+00:00"
         },
         {
             "name": "symfony/debug",
@@ -1254,7 +1254,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-28 21:38:24"
+            "time": "2017-03-28T21:38:24+00:00"
         },
         {
             "name": "symfony/finder",
@@ -1303,7 +1303,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-20 09:32:19"
+            "time": "2017-03-20T09:32:19+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1362,7 +1362,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14 01:06:16"
+            "time": "2016-11-14T01:06:16+00:00"
         },
         {
             "name": "symfony/process",
@@ -1411,7 +1411,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-27 18:07:02"
+            "time": "2017-03-27T18:07:02+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -1466,7 +1466,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-20 09:45:15"
+            "time": "2017-03-20T09:45:15+00:00"
         }
     ],
     "aliases": [],

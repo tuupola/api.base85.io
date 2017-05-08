@@ -15,7 +15,7 @@
 
 date_default_timezone_set("UTC");
 
-use Tuupola\Base62;
+use Tuupola\Base85;
 
 require __DIR__ . "/vendor/autoload.php";
 
@@ -35,7 +35,7 @@ require __DIR__ . "/config/middleware.php";
 
 $app->post("/encode", function ($request, $response, $arguments) {
     $body = $request->getParsedBody();
-    $encoded = (new Base62)->encode($body["data"]);
+    $encoded = (new Base85)->encode($body["data"]);
     return $response->withStatus(200)
         ->withHeader("Content-Type", "application/json")
         ->write(json_encode(["encoded" => $encoded], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
@@ -43,7 +43,7 @@ $app->post("/encode", function ($request, $response, $arguments) {
 
 $app->post("/decode", function ($request, $response, $arguments) {
     $body = $request->getParsedBody();
-    $decoded = (new Base62)->decode($body["data"]);
+    $decoded = (new Base85)->decode($body["data"]);
 
     return $response->withStatus(200)
         ->withHeader("Content-Type", "application/json")
