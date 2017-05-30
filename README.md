@@ -15,7 +15,7 @@ Now you can access the development api at [https://192.168.50.56/encode](https:/
 ### Encode
 
 ```
-$ curl https://api.base85.net/encode \
+$ curl https://api.base85.io/encode \
     --request POST \
     --include \
     --header "Content-Type:application/json" \
@@ -32,7 +32,7 @@ Content-Type: application/json
 ### Decode
 
 ```
-$ curl https://api.base85.net/decode  \
+$ curl https://api.base85.io/decode  \
     --request POST \
     --include \
     --header "Content-Type:application/json"  \
