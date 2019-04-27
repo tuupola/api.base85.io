@@ -15,13 +15,13 @@
 
 use Crell\ApiProblem\ApiProblem;
 use Gofabian\Negotiation\NegotiationMiddleware;
-use Tuupola\Middleware\Cors;
+use Tuupola\Middleware\CorsMiddleware;
 use Tuupola\Middleware\ServerTimingMiddleware;
 
 $container = $app->getContainer();
 
-$container["Cors"] = function ($container) {
-    return new Cors([
+$container["CorsMiddleware"] = function ($container) {
+    return new CorsMiddleware([
         "logger" => $container["logger"],
         "origin" => ["*"],
         "methods" => ["GET", "POST", "PUT", "PATCH", "DELETE"],
@@ -49,6 +49,6 @@ $container["ServerTimingMiddleware"] = function ($container) {
     return new ServerTimingMiddleware;
 };
 
-$app->add("Cors");
+$app->add("CorsMiddleware");
 $app->add("Negotiation");
 $app->add("ServerTimingMiddleware");
