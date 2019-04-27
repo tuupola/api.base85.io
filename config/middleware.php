@@ -16,7 +16,7 @@
 use Crell\ApiProblem\ApiProblem;
 use Gofabian\Negotiation\NegotiationMiddleware;
 use Tuupola\Middleware\Cors;
-use Tuupola\Middleware\ServerTiming;
+use Tuupola\Middleware\ServerTimingMiddleware;
 
 $container = $app->getContainer();
 
