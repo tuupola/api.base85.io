@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d9aee7f7fa051ee954627d330c8d193",
+    "content-hash": "51d3f71b3407dfa27e28414f37c909bb",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -90,6 +90,60 @@
                 "xml"
             ],
             "time": "2016-07-24T18:53:45+00:00"
+        },
+        {
+            "name": "deployer/recipes",
+            "version": "6.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/recipes.git",
+                "reference": "4c2470771249fbff55eb56429c29d74590768fa0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/recipes/zipball/4c2470771249fbff55eb56429c29d74590768fa0",
+                "reference": "4c2470771249fbff55eb56429c29d74590768fa0",
+                "shasum": ""
+            },
+            "replace": {
+                "deployer/recipes": "self.version"
+            },
+            "require-dev": {
+                "deployer/deployer": "^6.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io"
+                }
+            ],
+            "description": "3rd party deployer recipes",
+            "homepage": "https://github.com/deployphp/recipes",
+            "keywords": [
+                "cachetool",
+                "cloudflare",
+                "deploy",
+                "deployer",
+                "deployment",
+                "hipchat",
+                "newrelic",
+                "rabbit",
+                "recipes",
+                "sentry",
+                "slack",
+                "yarn"
+            ],
+            "time": "2019-01-17T06:03:27+00:00"
         },
         {
             "name": "gofabian/negotiation-middleware",
@@ -1172,72 +1226,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "deployer/recipes",
-            "version": "4.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/deployphp/recipes.git",
-                "reference": "4811488d2f210e5d93e874d9615aea8b58dc3aa2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/recipes/zipball/4811488d2f210e5d93e874d9615aea8b58dc3aa2",
-                "reference": "4811488d2f210e5d93e874d9615aea8b58dc3aa2",
-                "shasum": ""
-            },
-            "replace": {
-                "deployphp/recipes": "self.version"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Samuel Gordalina",
-                    "email": "samuel.gordalina@gmail.com",
-                    "homepage": "https://gordalina.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Tomas Majer",
-                    "email": "tomasmajer@gmail.com",
-                    "homepage": "http://tomaj.sk",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Hubert Kowalski",
-                    "email": "h.kowalski@hakger.pl",
-                    "homepage": "https://hakger.pl",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Anton Medvedev",
-                    "email": "anton@medv.io",
-                    "homepage": "http://medv.io",
-                    "role": "Contributor"
-                }
-            ],
-            "description": "3rd party deployer recipes",
-            "homepage": "https://github.com/deployphp/recipes",
-            "keywords": [
-                "cachetool",
-                "deploy",
-                "deployer",
-                "deployment",
-                "newrelic",
-                "recipes",
-                "slack"
-            ],
-            "time": "2017-03-27T16:28:47+00:00"
-        },
         {
             "name": "overtrue/phplint",
             "version": "0.2.1",

@@ -45,10 +45,10 @@ $container["Negotiation"] = function ($container) {
     ]);
 };
 
-$container["ServerTiming"] = function ($container) {
-    return new ServerTiming;
+$container["ServerTimingMiddleware"] = function ($container) {
+    return new ServerTimingMiddleware;
 };
 
 $app->add("Cors");
 $app->add("Negotiation");
-$app->add("ServerTiming");
+$app->add("ServerTimingMiddleware");
