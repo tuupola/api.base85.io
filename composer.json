@@ -22,11 +22,11 @@
         "slim/slim": "^3.0",
         "monolog/monolog": "^1.17",
         "vlucas/phpdotenv": "^2.0",
-        "tuupola/cors-middleware": "^0.5.0",
+        "tuupola/cors-middleware": "^0.9.4",
         "gofabian/negotiation-middleware": "^0.1.2",
         "crell/api-problem": "^2.0",
-        "tuupola/server-timing-middleware": "^0.3.0",
-        "tuupola/base85": "^0.3.1"
+        "tuupola/server-timing-middleware": "^0.8.2",
+        "tuupola/base85": "^0.4.0"
     },
     "autoload": {
         "psr-4": {
